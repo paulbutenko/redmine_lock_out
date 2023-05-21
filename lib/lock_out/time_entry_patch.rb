@@ -19,7 +19,7 @@ module LockOut
       end
 
       def spent_on_valid?
-        self.spent_on > lock_out_date || Time.now.to_date < lock_out_date || !month_locked?
+        !month_locked?
       end
 
       def lock_out_date
